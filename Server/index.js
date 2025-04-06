@@ -26,5 +26,15 @@ app.use('/client', clientRoutes);
 app.use('/sales', salesRoutes);
 app.use('/management', managementRoutes);
 
-const PORT = 8000;
-app.listen(PORT);
+const PORT = process.env.PORT || 8000;
+mongoose
+    .connect(`${process.env.MONGODB_URI}/${process.env.DB_NAME}`)
+    .then(() => {
+        console.log("DB connected successfully")
+        app.listen(PORT, () => {
+            console.log(`Server is running on http://localhost:${PORT}`);
+        })
+    })
+    .catch((err) => {
+        console.log(err)
+    })
