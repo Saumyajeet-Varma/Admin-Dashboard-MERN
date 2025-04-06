@@ -17,7 +17,7 @@ const Navbar = () => {
                     <IconButton onClick={() => console.log("open/close sidebar")}>
                         <MenuIcon />
                     </IconButton>
-                    <FlexBetween background={theme.palette.background.alt} borderRadius="9px" gap="3rem" p="0.1rem 1.5rem">
+                    <FlexBetween backgroundColor={theme.palette.background.alt} borderRadius="9px" gap="3rem" p="0.1rem 1.5rem">
                         <InputBase placeholder="Search..." />
                         <IconButton>
                             <Search />
