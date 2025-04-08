@@ -22974,5 +22974,5 @@ export const dataUser = [
         phoneNumber: "1371356593",
         transactions: ["63701d74f032399c0000014f", "63701d74f03239b7f700003f"],
         role: "admin",
-    },
+    }
 ];
